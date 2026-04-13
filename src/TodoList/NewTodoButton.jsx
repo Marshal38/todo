@@ -10,8 +10,6 @@ function NewTodoButton() {
 
     setOpen((e) => !e)
 
-    
-    
   }
   
   return (
@@ -21,7 +19,7 @@ function NewTodoButton() {
 
       +
     </button>
-    {open && <NewTodo/>}
+    {open && <NewTodo onClose={()=> setOpen(false)}/>}
     </>
   )
 }

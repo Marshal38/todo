@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
 
-  // здесь был затык как вытащить из todos данные, подсмотрел только сам todos: [], остальное сам
-
   todos: [],
-  filter: 'all'
+  filter: 'all',
+  search: '',
+  value: ''
 
 }
 
@@ -19,7 +19,16 @@ const todoSlice = createSlice({
 
     getFilter(state, action){
       state.filter = action.payload
+    },
+
+    getSearch(state, action) {
+      state.search = action.payload
+    },
+
+    getPost(state, action) {
+      state.value = action.payload
     }
+
 
 
     
@@ -31,6 +40,6 @@ const todoSlice = createSlice({
 
 
 
-export const {getTodos, getFilter} = todoSlice.actions;
+export const {getTodos, getFilter, getSearch, getPost} = todoSlice.actions;
 
 export default todoSlice.reducer;

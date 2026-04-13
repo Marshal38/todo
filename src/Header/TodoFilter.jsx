@@ -6,6 +6,7 @@ function TodoFilter() {
   const dispatch = useDispatch();
 
   function handleFilter(e){
+    e.preventDefault()
     dispatch(getFilter(e.target.value))
   }
 

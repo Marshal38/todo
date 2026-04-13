@@ -2,6 +2,10 @@ import SearchToDo from "./SearchToDo"
 import TodoFilter from "./TodoFilter"
 
 function Header() {
+
+  
+
+
   return (
     <header className="flex flex-col items-center mt-8 w-auto px-6 py-5">
     <p className="text-2xl font-bold tracking-wider">
